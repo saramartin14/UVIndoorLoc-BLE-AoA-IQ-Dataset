@@ -1,5 +1,9 @@
 # UVIndoorLoc-BLE-AoA&IQ Dataset
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19823027.svg)](https://doi.org/10.5281/zenodo.19823027)
+![Python Version](https://img.shields.io/badge/python-3.13.9-blue.svg)
+![License](https://img.shields.io/badge/license-Apache%202.0-orange.svg)
+
 This repository contains the **UVIndoorLoc-BLE-AoA&IQ Dataset**, a collection of In-phase and Quadrature (I/Q) signal samples and Angle-of-Arrival (AoA) measurements based on the Bluetooth Low Energy (BLE) 5.1 specification. The project focuses on providing a BLE 5.1 AoA dataset by collecting data in three distinct real-world scenarios at the Escola Tècnica Superior d'Enginyeria (ETSE) of the University of Valencia (UV).
 
 ## :file_folder: Repository Structure
@@ -86,3 +90,13 @@ The dataset distribution is as follows:
 | 1.b Corridor  | 26  |  21  | $135.235\text{ m}^2$  |
 | 2. Meeting Room  | 60  | 30  | $187.392\text{ m}^2$  | 
 | 3. Auditorium  | 25  |  20  | $152.170\text{ m}^2$  |
+
+## :memo: Citation
+If you use this code or results, please cite:
+
+Source Dataset:
+> Martín Frechina, S., Dura, E., & Torres-Sospedra, J. (2026). UVIndoorLoc-BLE-AoA&IQ Dataset [Data set]. Zenodo. https://doi.org/10.5281/zenodo.19823027
+
+
+## :page_facing_up: License
+This project is licensed under the [Apache License 2.0](LICENSE).
