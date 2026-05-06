@@ -143,7 +143,7 @@ def main():
         print(f"\n>>> Scenario: {room}")
         raw_base = os.path.join(room, "raw_data")
         if not os.path.exists(raw_base):
-            print(f"  [!] raw_data folder not found in {room}")
+            print(f"raw_data folder not found in {room}")
             continue
         
         # Recursively search for leaf folders containing capture files
