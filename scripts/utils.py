@@ -41,8 +41,4 @@ def get_set_type(pid):
 
 def apply_aoa_math(value, offset):
     """Correction formula: (-Azimuth + Anchor_Orientation) % 360."""
-<<<<<<< HEAD
     return (-value + offset) % 360
-=======
-    return (-value + offset) % 360
->>>>>>> 3c36856 (Repository structure and scripts)
