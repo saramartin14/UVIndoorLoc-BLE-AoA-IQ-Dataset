@@ -2,11 +2,7 @@ import pandas as pd
 import glob
 import os
 import re
-<<<<<<< HEAD
-from scripts.utils import ensure_dir, extract_id, apply_aoa_math
-=======
 from utils import ensure_dir, extract_id, apply_aoa_math
->>>>>>> 3c36856 (Repository structure and scripts)
 
 SCENARIOS = {
     "Laboratory": {
@@ -146,8 +142,4 @@ def clean_scenarios():
                 print(f"  Saved: {save_filename} ({len(final_df)} samples)")
 
 if __name__ == "__main__":
-<<<<<<< HEAD
     clean_scenarios()
-=======
-    clean_scenarios()
->>>>>>> 3c36856 (Repository structure and scripts)
