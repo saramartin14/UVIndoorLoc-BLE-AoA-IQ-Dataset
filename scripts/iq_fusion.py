@@ -29,7 +29,20 @@ def process_leaf_folder(folder_path, room_path):
     Processes a specific raw data folder and saves the results in:
     [room_path]/processed_iq_fusion/[sub_folder_structure]
     """
-    config_type = "45Inward" if "45Inward" in folder_path else "FacetoFace"
+    if "3_Auditorium" in folder_path:
+        config_type = "45Inward"
+
+    elif "test2" in folder_path:
+        if "/Corridor/" in folder_path:
+            config_type = "FacetoFace"  
+        else:
+            config_type = "45Inward"    
+
+    else:
+        if "FacetoFace" in folder_path:
+            config_type = "FacetoFace"
+        else:
+            config_type = "45Inward"
     pts_map, anchor_df = load_coords(room_path, config_type)
     
     all_files = glob.glob(os.path.join(folder_path, "capture_Anchor*.csv"))
@@ -139,8 +152,4 @@ def main():
                 process_leaf_folder(root, room)
 
 if __name__ == "__main__":
-<<<<<<< HEAD
     main()
-=======
-    main()
->>>>>>> 3c36856 (Repository structure and scripts)
