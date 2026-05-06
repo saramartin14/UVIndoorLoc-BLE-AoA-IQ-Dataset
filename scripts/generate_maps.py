@@ -114,8 +114,4 @@ def generate_final_pngs():
     print("Generated maps.")
 
 if __name__ == "__main__":
-<<<<<<< HEAD
     generate_final_pngs()
-=======
-    generate_final_pngs()
->>>>>>> 3c36856 (Repository structure and scripts)
