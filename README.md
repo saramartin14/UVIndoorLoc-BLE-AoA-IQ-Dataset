@@ -45,6 +45,8 @@ The project is organized into the following directories:
     - [`3_auditorium.png`](3_Auditorium/map/3_auditorium.png)
   - [`processed_iq_fusion`](3_Auditorium/processed_iq_fusion): Contains synchronized CSV files where data from all four anchors have been merged into a single stream using [`iq_fusion.py`](scripts/iq_fusion.py).
   - [`raw_data`](3_Auditorium/raw_data): Organized by subset (train, test1, test2). It contains the original CSV files for each individual anchor (4 files per point).
+- [`figures`](figures): Generated signal characterization and data quality figures.
+- [`results`](results): Generated evaluation outputs and positioning example figures.
 - [`scripts`](scripts): Processing, visualization, statistical analysis, and baseline scripts:
   - [`dataset_cleaning.py`](scripts/dataset_cleaning.py): Data cleaning, Ground Truth assignment, and per-anchor LoS/NLoS label integration.
   - [`generate_maps.py`](scripts/generate_maps.py): Map visualization.
