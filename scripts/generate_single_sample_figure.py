@@ -296,7 +296,7 @@ def main():
     
     fig.legend(handles=shared_handles, loc='upper center', bbox_to_anchor=(0.51, 0.02), ncol=3, frameon=True, fontsize=8.8, columnspacing=1.5)
 
-    out_pdf = f'results/fig_single_sample_illustration_{scenario_name}_{config_name}_{selected_id}_row{row_idx}.pdf'
+    out_pdf = f'figures/fig_single_sample_illustration_{scenario_name}_{config_name}_{selected_id}_row{row_idx}.pdf'
     plt.savefig(out_pdf, dpi=300, bbox_inches='tight')
     print(f"\nFigure saved successfully as '{out_pdf}'")
     plt.show()
