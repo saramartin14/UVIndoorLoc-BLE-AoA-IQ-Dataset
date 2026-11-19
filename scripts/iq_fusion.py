@@ -108,13 +108,14 @@ def process_leaf_folder(folder_path, room_path):
                     df[f'ay_{anchor_name}'] = row['Y_coordinate'].values[0]
 
             # Select relevant columns for fusion
-            cols = ['timestamp', 'channel'] if len(dfs_to_merge) == 0 else ['timestamp']
+            base_cols = ['timestamp', 'channel', 'pac']
+            cols = [c for c in base_cols if c in df.columns]
             cols += [c for c in df.columns if anchor_name in c]
             dfs_to_merge.append(df[cols])
 
         # Perform time-based fusion
         # Using a tolerance to handle initial clock differences
-        final_df = merge_node_data_iq(dfs_to_merge, tolerance=0.08)
+        final_df = merge_node_data_iq(dfs_to_merge, tolerance=0.02)
 
         if not final_df.empty:
             id_num = int(id_tag.replace("ID", ""))
@@ -143,7 +144,7 @@ def main():
         print(f"\n>>> Scenario: {room}")
         raw_base = os.path.join(room, "raw_data")
         if not os.path.exists(raw_base):
-            print(f"raw_data folder not found in {room}")
+            print(f"  [!] raw_data folder not found in {room}")
             continue
         
         # Recursively search for leaf folders containing capture files
